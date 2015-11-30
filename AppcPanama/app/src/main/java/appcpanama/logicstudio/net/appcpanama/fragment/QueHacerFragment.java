@@ -53,19 +53,19 @@ public class QueHacerFragment extends Fragment {
         ListViewItem item = new ListViewItem();
 
         item.image = R.drawable.quehacer_1;
-        item.text = "1. Siempre ayuda al perezoso a cruzar en la dirección que iba, no lo regreses porque seguirá intentando cruzar.";
+        item.text = "Siempre ayuda al perezoso a cruzar en la dirección que iba, no lo regreses porque seguirá intentando cruzar.";
         lst.add(item);
 
         item = new ListViewItem();
 
-        item.image = R.drawable.quehacer_2;
-        item.text = "2.Detén el tráfico o ayúdalo a cruzar, ¿Cómo? utiliza una rama para que se agarre " +
+        item.image = R.drawable.sujetar_perezoso_2;
+        item.text = "Detén el tráfico o ayúdalo a cruzar, ¿Cómo? utiliza una rama para que se agarre " +
                 "o sujétalo por la espalda con tu brazo extendido.";
         lst.add(item);
 
         item = new ListViewItem();
         item.image = R.drawable.quehacer_3;
-        item.text = "2.Son muy parecidos a los perezosos de tres dedos, con la diferencia que no tienen cola y en el número de dedos. " +
+        item.text = "Son muy parecidos a los perezosos de tres dedos, con la diferencia que no tienen cola y en el número de dedos. " +
                 "El pelaje es largo, grueso y ondulado, los cabellos son de color marrón con puntas de color crema. ";
         lst.add(item);
 

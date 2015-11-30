@@ -29,6 +29,7 @@
     <string name="animal_peligro_title">Existe un animal en peligro</string>
     <string name="peligro_message">Existe un animal en peligro en:</string>
     <string name="email_to">alex.sanchez@logicstudio.net</string>
+    <string name="title_activity_about_app">AboutAppActivity</string>
 
 
 

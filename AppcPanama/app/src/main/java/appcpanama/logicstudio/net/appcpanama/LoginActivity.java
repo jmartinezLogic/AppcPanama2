@@ -40,13 +40,15 @@ public class LoginActivity extends AppCompatActivity {
 
                     ClienteAppApplication app = (ClienteAppApplication) getApplication();
                     List<Animal> animalList =new ArrayList<>();
-                    Animal peresozo = new Animal("Perezoso de dos dedos", "Choloepus hoffmanni", R.drawable.perezoso);
+                    Animal peresozo = new Animal("Perezoso de dos dedos", "Choloepus hoffmanni", R.drawable.perezoso_de_2_dedos);
+                    Animal peresozo2 = new Animal("Perezoso de tres dedos", "Bradipus variegatus", R.drawable.perezoso_de_3_dedos);
                     Animal titi = new Animal("Mono Tit\u00ed", "Saguinus geoffroyi ", R.drawable.titi);
                     Animal neque = new Animal("\u00d1eque", "Dasyprocta punctata", R.drawable.neque);
-                    Animal coati = new Animal("Coat\u00ed", "Nasua narica", R.drawable.coati);
-                    Animal tigrillo = new Animal("Tigrillo", "Leopardus pardalisi", R.drawable.tigrillo);
+                    Animal coati = new Animal("Coat\u00ed (Gato s\u00f3lo)", "Nasua narica", R.drawable.coati);
+                    //Animal tigrillo = new Animal("Tigrillo", "Leopardus pardalisi", R.drawable.tigrillo);
                     animalList.add(peresozo);
-                    animalList.add(tigrillo);
+                    animalList.add(peresozo2);
+                    //animalList.add(tigrillo);
                     animalList.add(titi);
                     animalList.add(neque);
                     animalList.add(coati);
@@ -71,9 +73,33 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void setToolbar() {
-        // Añadir la Toolbar
+        // A�adir la Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Rescate Animal");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left_white_24dp);
+        getSupportActionBar().setTitle("Rescate Animal");
+        if (toolbar != null) {
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onBackPressed();
+                }
+            });
+        }
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.action_ayuda: {
+                        AboutAppActivity.createInstance(LoginActivity.this);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
     }
 }
